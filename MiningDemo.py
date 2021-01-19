@@ -45,8 +45,9 @@ class Blockchain:
 
     def mining(self, block):
         for n in range(self.hashRand_Max):
-            if (int(block.hashCreate(), 16) < self.end) or (int(block.hashCreate(), 16) == self.end):
+            if (int(block.hashCreate(), 16) <= self.end):
                 self.add(block)
+                print("Proof-of-work is accepted") #Proof-of-work since we can verify the value of the hash in the conditional
                 print(block)
                 break
             else:
