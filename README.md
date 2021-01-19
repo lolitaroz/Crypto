@@ -1,8 +1,10 @@
 # Crypto
 
-In order to run the demo:
-1. Clone our repository:
+Our demo includes three different difficulties to demonstrate the effect of changing the accepted range for mining values
 
-  git clone https://github.com/lolitaroz/Crypto.git
-  
-2.  make run
+git clone https://github.com/lolitaroz/Crypto.git
+make easy
+OR
+make medium
+OR
+make difficult
