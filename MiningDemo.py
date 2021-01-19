@@ -1,6 +1,7 @@
 import datetime
 import hashlib
 import random
+import sys
 
 class Block:
     blockNum = 0
@@ -29,8 +30,9 @@ class Block:
         return "Block Hash: " + str(self.hashCreate()) + "\nBlock Number: " + str(self.blockNum) + "\nBlock Data: " + str(self.info) + "\nHashes: " + str(self.hashRand) + "\n-----------"
 
 class Blockchain:
+    diff = int(sys.argv[1])
     hashRand_Max = 2 ** 32 # internal block size for SHA256 is 32 bits
-    end = 2 ** (256 - 20)
+    end = 2 ** (256 - diff)
 
     block = Block("Start")
     temp = beginning = block
